@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/ashishsingh/eclipse-workspace/Ashish_python_Scripts/test4greeks.py", line 222, in <module>
+    print tmp.read()
+IOError: File not open for reading

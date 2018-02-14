@@ -1,12 +1,5 @@
-#/usr/bin/python
-import multiprocessing,sys
-
-ran=1
-b=len(sys.argv)
-def fuy(u):
-	return open(sys.argv[u]).read()
-	
-pool=multiprocessing.Pool(processes=4)
-result=pool.map(fuy,range(1,b,ran))
-pool.close()
-print(result)
+var=1
+while var == 1:
+	num=raw_input("Enter : ")
+    	print "num :",num
+print "ashish"

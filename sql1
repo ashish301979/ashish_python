@@ -1,0 +1,18 @@
+BEGIN TRY
+EGIN TRAN
+	INSERT INTO Customers (CustomerFirstName, CustomerLastName)
+    VALUES ('Jim', 'Simith')
+    GO
+	SELECT TOP 100 *
+    FROM Coustmers
+    GO
+    
+    First '@@TRANCOUNT is ' * CAST(@@TRANCOUNT AS VARCHAR(10))
+    COMMIT
+    PRINT 'Done'
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+    	ROLLBACK
+	PRINT '@@TRANCOUNT Catch Block: ' + CAST(@@TRANCOUNT AS VARCHAR(10))
+END CATCH 
